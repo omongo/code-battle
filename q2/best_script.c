@@ -52,10 +52,8 @@ int main(void)
 struct list *append_list(struct list *l, char *val)
 {
     struct list *new = (struct list *) malloc(sizeof (struct list));
-    if (new == NULL) {
+    if (new == NULL)
         exit(1);
-        puts("error: append_list");
-    }
     strncpy(new->val, val, 7);
     new->freq = 1;
     new->next = l;
